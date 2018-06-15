@@ -7,3 +7,19 @@ git checkout -- 文件名.后缀  //使用版本库最新版的文件替换当�
 git reset HEAD 文件名.后缀   //既可以把暂存区的修改撤销掉，重新放回工作区（即修改后并add后，使用改命令可以退回到add前，工作区的修改还是存在的）
 
 
+第一次新建远程仓库遇到的问题：
+1.git push -u origin master  git@github.com:Powpaaaaaa/GitPractice.git  
+报错：Updates were rejected because the remote contains work that you do
+not have locally. This is usually caused by another repository pushing
+to the same ref. You may want to first integrate the remote changes
+(e.g., 'git pull ...') before pushing again.
+
+原因：远程仓库版本和本地仓库不一致（他妈的就因为我github仓库新建的时候多了个readme）
+解决方法：
+1. git init //初始化仓库
+2. git add .(文件name) //添加文件到本地仓库
+3. git commit -m "first commit" //添加文件描述信息
+4. git remote add origin + 远程仓库地址 //链接远程仓库，创建主分支
+5. git pull origin master --allow-unrelated-histories   //光打git pull origin master //还会报fatal，网上教程详细的很难找啊，把本地仓库的变化连接到远程仓库主分支把本地仓库的变化连接到远程仓库主分支
+6. git push -u origin master //把本地仓库的文件推送到远程仓库
+
