@@ -1,0 +1,9 @@
+类型             位数            值域
+boolean 		 JVM决定        true或false
+char             16bits         0~65535（2^16）
+byte             8bits          -128-127（2^8）
+short            16bits         -32768~32767（2^16，有正负号）
+int              32bits         -2147483648~2147483647（2^32，有正负号）
+long             64bits         2^64有正负号，很大
+float            32bits         范围可变
+double           64bits         范围可变
